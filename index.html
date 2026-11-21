@@ -1,947 +1,452 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ibrahima FALL · INGENIUM — Directeur Pédagogique</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>INGENIUM · Accompagnement académique à Dakar</title>
+<meta name="description" content="INGENIUM accompagne les élèves du CM2 à la Terminale à Dakar, à domicile ou en ligne : bilan d'entrée, trois objectifs, trace après chaque séance, bilan chaque mois.">
+<meta property="og:title" content="INGENIUM · Le talent, par la méthode.">
+<meta property="og:description" content="Accompagnement académique à Dakar, du CM2 à la Terminale. À domicile ou en ligne.">
+<meta name="theme-color" content="#0F3D32">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Crect width='200' height='200' rx='40' fill='%230F3D32'/%3E%3Cg transform='translate(100 100) scale(0.62) translate(-100 -96)'%3E%3Cpath d='M70,64 H130 V73 Q113,73 113,84 V152 Q113,163 136,163 V172 H64 V163 Q87,163 87,152 V84 Q87,73 70,73 Z' fill='%23F3F5F2'/%3E%3Cpath d='M100,20 L113,37 L100,54 L87,37 Z' fill='%23E2506F'/%3E%3C/g%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,200;0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&family=Cinzel:wght@400;600;700;900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-/* ════════════════════════════════════════════
-   DESIGN SYSTEM
-════════════════════════════════════════════ */
-:root {
-  --navy:     #050F1E;
-  --navy2:    #0A1E3A;
-  --navy3:    #112850;
-  --navy4:    #1a3a6e;
-  --gold:     #C8A84B;
-  --gold2:    #E2C06B;
-  --gold3:    #F5DFA0;
-  --gold-glow: rgba(200,168,75,0.18);
-  --cream:    #FAF7F0;
-  --white:    #FFFFFF;
-  --white80:  rgba(255,255,255,0.80);
-  --white50:  rgba(255,255,255,0.50);
-  --white20:  rgba(255,255,255,0.20);
-  --white08:  rgba(255,255,255,0.08);
-  --white04:  rgba(255,255,255,0.04);
-  --gold30:   rgba(200,168,75,0.30);
-  --gold15:   rgba(200,168,75,0.15);
-  --gold08:   rgba(200,168,75,0.08);
-  --success:  #22C55E;
-  --rad:      6px;
-  --rad-lg:   12px;
-}
+  :root{
+    --k:#0F3D32; --k2:#16503F; --k-soft:#E3EDE8;
+    --b:#A3213F; --b-vif:#E2506F; --b-soft:#F7E4E9;
+    --craie:#F3F5F2; --white:#FFFFFF; --basalte:#1D2522; --pierre:#5E6B66; --brume:#DDE4E0;
+    --serif:'Fraunces', Georgia, 'Times New Roman', serif;
+    --sans:'Manrope', 'Segoe UI', system-ui, -apple-system, Arial, sans-serif;
+    --wrap:1160px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--white);color:var(--basalte);font-family:var(--sans);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+  a{color:var(--k)} a:hover{color:var(--b)}
+  svg{display:block}
+  .wrap{max-width:var(--wrap);margin:0 auto;padding:0 24px}
+  .kicker{display:inline-flex;align-items:center;gap:10px;font-size:13px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--b);margin:0 0 16px}
+  .kicker::before{content:"";width:9px;height:9px;background:var(--b);transform:rotate(45deg)}
+  h1,h2,h3{font-family:var(--serif);color:var(--k);font-weight:600;line-height:1.06;margin:0;text-wrap:balance;letter-spacing:-.01em}
+  h2{font-size:clamp(34px,4.6vw,52px)}
+  h3{font-size:24px}
+  p{margin:0;text-wrap:pretty}
+  .lead{font-size:19px;color:#34413C;max-width:60ch}
+  section{padding:104px 0}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:50px;padding:12px 24px;border-radius:999px;font-weight:700;font-size:16px;text-decoration:none;transition:transform .15s,background .15s,color .15s;border:2px solid transparent}
+  .btn:hover{transform:translateY(-1px)}
+  .btn-b{background:var(--b);color:var(--white)} .btn-b:hover{background:#8A1B35;color:var(--white)}
+  .btn-k{background:var(--k);color:var(--white)} .btn-k:hover{background:#0A2E25;color:var(--white)}
+  .btn-line{border-color:var(--k);color:var(--k)} .btn-line:hover{background:var(--k);color:var(--white)}
+  .btn-light{border-color:rgba(255,255,255,.55);color:var(--white)} .btn-light:hover{background:var(--white);color:var(--k)}
+  a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--b-vif);outline-offset:3px}
 
-*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
-html { scroll-behavior: smooth; font-size: 16px; }
-body {
-  font-family: 'DM Sans', sans-serif;
-  background: var(--navy);
-  color: var(--white);
-  min-height: 100vh;
-  overflow-x: hidden;
-  -webkit-font-smoothing: antialiased;
-}
+  /* header */
+  header{position:sticky;top:0;z-index:30;background:rgba(255,255,255,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--brume)}
+  .nav{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:74px}
+  .brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+  .brand-word{font-family:var(--serif);font-weight:600;font-size:24px;letter-spacing:.12em;color:var(--k)}
+  .nav ul{display:flex;gap:30px;list-style:none;margin:0;padding:0}
+  .nav ul a{text-decoration:none;font-size:15px;font-weight:600;color:#34413C}
+  .nav ul a:hover{color:var(--b)}
+  .nav .btn{min-height:44px;padding:10px 20px;font-size:15px;white-space:nowrap}
 
-/* ════════════════════════════════════════════
-   CANVAS / BACKGROUND
-════════════════════════════════════════════ */
-#canvas-bg {
-  position: fixed; inset: 0; z-index: 0;
-  pointer-events: none;
-}
+  /* hero */
+  .hero{background:var(--k);color:#D5E2DC;padding:0;overflow:hidden;position:relative}
+  .hero::after{content:"";position:absolute;right:-120px;top:-120px;width:520px;height:520px;border:1px solid rgba(226,80,111,.35);transform:rotate(45deg);pointer-events:none}
+  .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center;padding:96px 0 104px;position:relative;z-index:1}
+  .hero .kicker{color:var(--b-vif)} .hero .kicker::before{background:var(--b-vif)}
+  .hero h1{font-size:clamp(48px,7.2vw,92px);color:var(--white)}
+  .hero h1 em{font-style:italic;font-weight:500;color:#F2B8C6}
+  .hero .lead{margin-top:28px;color:#D5E2DC}
+  .hero-actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:38px}
+  .hero-note{margin-top:20px;font-size:14px;color:#A9BDB5}
+  /* trace card */
+  .trace{background:var(--white);color:var(--basalte);border-radius:18px;padding:22px 22px 18px;box-shadow:0 30px 60px -25px rgba(0,0,0,.45);max-width:400px;justify-self:end;transform:rotate(1.5deg)}
+  .trace-top{display:flex;align-items:center;gap:12px;padding-bottom:14px;border-bottom:1px solid var(--brume)}
+  .avatar{width:42px;height:42px;border-radius:50%;background:var(--k);display:grid;place-items:center;flex:none}
+  .trace-top b{display:block;font-size:15px;color:var(--k)}
+  .trace-top span{font-size:12.5px;color:var(--pierre)}
+  .bubble{margin-top:14px;background:var(--k-soft);border-radius:4px 14px 14px 14px;padding:14px 16px;font-size:14.5px;line-height:1.55}
+  .bubble strong{color:var(--k)}
+  .bubble .row{display:flex;gap:8px}
+  .bubble .row+.row{margin-top:4px}
+  .bubble .lbl{min-width:84px;color:var(--pierre)}
+  .photo{margin-top:10px;border:1px dashed #A9BDB5;border-radius:10px;padding:12px 14px;font-size:13px;color:var(--pierre);display:flex;gap:10px;align-items:center}
+  .tag-ex{display:inline-block;margin-top:12px;font-size:12px;color:var(--pierre)}
 
-.bg-noise {
-  position: fixed; inset: 0; z-index: 0; pointer-events: none; opacity: 0.025;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-  background-size: 200px 200px;
-}
+  /* strip */
+  .strip{background:var(--craie);padding:28px 0;border-bottom:1px solid var(--brume)}
+  .strip ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:12px 36px;justify-content:center;font-weight:600;color:var(--k);font-size:15.5px}
+  .strip li{display:flex;align-items:center;gap:10px}
+  .strip li::before{content:"";width:7px;height:7px;background:var(--b);transform:rotate(45deg)}
 
-.bg-mesh {
-  position: fixed; inset: 0; z-index: 0; pointer-events: none;
-  background:
-    radial-gradient(ellipse 80% 60% at 50% -10%, rgba(200,168,75,0.12) 0%, transparent 60%),
-    radial-gradient(ellipse 60% 50% at 10% 90%, rgba(17,40,80,0.9) 0%, transparent 50%),
-    radial-gradient(ellipse 40% 60% at 90% 30%, rgba(5,15,30,0.95) 0%, transparent 55%),
-    radial-gradient(ellipse 100% 100% at 50% 50%, var(--navy2) 0%, var(--navy) 100%);
-}
+  /* deliverables */
+  .deliv-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:24px}
+  .deliv{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;margin-top:52px}
+  .dcard{border:1px solid var(--brume);border-radius:16px;padding:26px 22px;display:flex;flex-direction:column;gap:12px;background:var(--white);transition:border-color .15s,transform .15s}
+  .dcard:hover{border-color:var(--k);transform:translateY(-2px)}
+  .dnum{font-family:var(--serif);font-size:15px;font-weight:600;color:var(--b);letter-spacing:.06em}
+  .dcard h3{font-size:22px}
+  .dcard p{font-size:15.5px;color:#34413C}
+  .when{margin-top:auto;font-size:13px;font-weight:700;color:var(--k);background:var(--k-soft);border-radius:999px;padding:6px 12px;align-self:flex-start}
 
-/* Fine gold grid */
-.bg-grid {
-  position: fixed; inset: 0; z-index: 0; pointer-events: none;
-  background-image:
-    linear-gradient(rgba(200,168,75,0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(200,168,75,0.04) 1px, transparent 1px);
-  background-size: 48px 48px;
-}
+  /* method */
+  .method{background:var(--craie)}
+  .cycle{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;margin-top:56px;position:relative}
+  .cycle::before{content:"";position:absolute;left:0;right:0;top:27px;height:2px;background:var(--brume)}
+  .step{position:relative;padding-right:24px}
+  .step .dot{width:56px;height:56px;border-radius:50%;background:var(--white);border:2px solid var(--k);display:grid;place-items:center;font-family:var(--serif);font-weight:600;font-size:22px;color:var(--k);position:relative;z-index:1}
+  .step:last-child .dot{background:var(--k);color:var(--white)}
+  .step h3{margin-top:20px;font-size:24px}
+  .step p{margin-top:8px;font-size:15.5px;color:#34413C}
+  .scale{margin-top:64px;display:grid;grid-template-columns:.9fr 1.1fr;gap:40px;align-items:center;background:var(--white);border-radius:18px;padding:32px 36px;border:1px solid var(--brume)}
+  .levels{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+  .lvl{border-radius:12px;padding:14px;font-size:14px;line-height:1.35;min-height:108px;display:flex;flex-direction:column;justify-content:space-between}
+  .lvl b{font-family:var(--serif);font-size:30px;line-height:1}
+  .l1{background:var(--craie);color:var(--k)} .l2{background:#CFE0D8;color:var(--k)} .l3{background:#5C8B7A;color:var(--white)} .l4{background:var(--k);color:var(--white)}
 
-/* Decorative corner brackets */
-.corner { position: fixed; width: 48px; height: 48px; z-index: 2; pointer-events: none; }
-.corner::before, .corner::after { content:''; position:absolute; background:var(--gold); opacity:0.25; }
-.c-tl { top:18px; left:18px; }
-.c-tl::before { top:0; left:0; width:100%; height:1px; }
-.c-tl::after  { top:0; left:0; width:1px; height:100%; }
-.c-tr { top:18px; right:18px; }
-.c-tr::before { top:0; right:0; width:100%; height:1px; }
-.c-tr::after  { top:0; right:0; width:1px; height:100%; }
-.c-bl { bottom:18px; left:18px; }
-.c-bl::before { bottom:0; left:0; width:100%; height:1px; }
-.c-bl::after  { bottom:0; left:0; width:1px; height:100%; }
-.c-br { bottom:18px; right:18px; }
-.c-br::before { bottom:0; right:0; width:100%; height:1px; }
-.c-br::after  { bottom:0; right:0; width:1px; height:100%; }
+  /* session */
+  .session-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:64px;align-items:center}
+  .bar{display:flex;height:64px;border-radius:14px;overflow:hidden;margin-top:8px}
+  .bar div{display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px;color:var(--white)}
+  .s1{flex:10;background:#5C8B7A}.s2{flex:25;background:var(--k2)}.s3{flex:40;background:var(--k)}.s4{flex:15;background:var(--b)}
+  .moments{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 28px;margin-top:28px}
+  .moments h3{font-size:21px;display:flex;align-items:baseline;gap:10px}
+  .moments h3 span{font-family:var(--sans);font-size:13px;font-weight:700;color:var(--pierre)}
+  .moments p{font-size:15px;color:#34413C;margin-top:4px}
+  .moments .anchor h3{color:var(--b)}
+  .callout{margin-top:28px;background:var(--b-soft);border-radius:14px;padding:20px 22px;font-size:16px}
+  .callout strong{color:var(--b)}
 
-/* ════════════════════════════════════════════
-   LAYOUT
-════════════════════════════════════════════ */
-.wrap {
-  position: relative; z-index: 3;
-  width: 100%; max-width: 480px;
-  margin: 0 auto;
-  padding: 60px 20px 120px;
-}
+  /* pricing */
+  .pricing{background:var(--k);color:#D5E2DC}
+  .pricing h2{color:var(--white)}
+  .pricing .kicker{color:var(--b-vif)} .pricing .kicker::before{background:var(--b-vif)}
+  .pricing-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:24px}
+  .toggle{display:inline-flex;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:999px;padding:4px}
+  .toggle button{font:700 15px var(--sans);border:0;background:transparent;color:#D5E2DC;padding:10px 20px;border-radius:999px;min-height:44px;cursor:pointer}
+  .toggle button[aria-pressed="true"]{background:var(--white);color:var(--k)}
+  .plans{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-top:44px}
+  .plan{background:var(--white);color:var(--basalte);border-radius:18px;padding:30px 26px;display:flex;flex-direction:column;gap:10px;position:relative}
+  .plan.pop{outline:3px solid var(--b-vif)}
+  .badge{position:absolute;top:-13px;left:26px;background:var(--b-vif);color:var(--white);font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:5px 12px;border-radius:999px}
+  .plan h3{font-size:28px}
+  .rhythm{font-size:15px;color:var(--pierre)}
+  .price{font-family:var(--serif);font-size:46px;font-weight:600;color:var(--k);line-height:1;margin-top:8px}
+  .price small{font-family:var(--sans);font-size:15px;font-weight:600;color:var(--pierre)}
+  .per{font-size:13.5px;color:var(--pierre)}
+  .plan p.use{font-size:15px;margin-top:6px}
+  .extras{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;margin-top:20px}
+  .extra{border:1px solid rgba(255,255,255,.2);border-radius:18px;padding:22px 26px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+  .extra h3{font-size:22px;color:var(--white)}
+  .extra p{font-size:14.5px;color:#A9BDB5}
+  .extra .price{color:var(--white);font-size:34px}
+  .extra .price small{color:#A9BDB5}
+  .fine{margin-top:24px;font-size:14.5px;color:#A9BDB5;max-width:84ch}
 
-/* ════════════════════════════════════════════
-   HERO HEADER
-════════════════════════════════════════════ */
-.hero { text-align: center; margin-bottom: 36px; }
+  /* trust */
+  .trust{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:56px;align-items:start}
+  .promise-box{background:var(--craie);border-radius:18px;padding:34px 34px 30px}
+  .promise-box ul{list-style:none;padding:0;margin:20px 0 0;display:flex;flex-direction:column;gap:10px}
+  .promise-box li{display:flex;gap:12px;font-size:16px}
+  .promise-box li::before{content:"";flex:none;width:9px;height:9px;margin-top:8px;background:var(--k);transform:rotate(45deg)}
+  .promise-box .no{margin-top:20px;padding-top:18px;border-top:1px solid var(--brume);font-size:15.5px;color:#34413C}
+  .promise-box .no strong{color:var(--b)}
+  .founder .role{color:var(--b);font-weight:700;font-size:15px;margin-top:8px}
+  .founder h3{font-size:34px}
+  .founder p{margin-top:14px}
+  .founder .supports{margin-top:22px;border-left:3px solid var(--b);padding-left:16px;font-size:15.5px;color:#34413C}
 
-/* Avatar ring */
-.avatar-ring {
-  position: relative;
-  width: 92px; height: 92px;
-  margin: 0 auto 22px;
-  opacity: 0;
-  animation: fadeDown 0.8s 0.1s cubic-bezier(0.34,1.56,0.64,1) forwards;
-}
-.avatar-ring::before {
-  content:'';
-  position: absolute; inset: -3px;
-  border-radius: 50%;
-  background: conic-gradient(from 0deg, var(--gold), transparent 60%, var(--gold2) 100%);
-  animation: spinRing 6s linear infinite;
-}
-.avatar-ring::after {
-  content:'';
-  position: absolute; inset: -6px;
-  border-radius: 50%;
-  background: conic-gradient(from 180deg, rgba(200,168,75,0.15), transparent 70%);
-  animation: spinRing 10s linear infinite reverse;
-}
-.avatar-inner {
-  position: absolute; inset: 3px;
-  border-radius: 50%;
-  background: var(--navy3);
-  display: flex; align-items: center; justify-content: center;
-  overflow: hidden; z-index: 1;
-  font-size: 32px;
-  font-family: 'Cinzel', serif;
-  font-weight: 700;
-  color: var(--gold2);
-  letter-spacing: 0px;
-  text-shadow: 0 0 20px rgba(200,168,75,0.5);
-}
+  /* faq */
+  .faq{background:var(--craie)}
+  .faq-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px}
+  details{border-bottom:1px solid var(--brume);padding:18px 0}
+  details:first-of-type{border-top:1px solid var(--brume)}
+  summary{cursor:pointer;font-family:var(--serif);font-size:22px;font-weight:600;color:var(--k);list-style:none;display:flex;justify-content:space-between;gap:16px;min-height:44px;align-items:center}
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:"";flex:none;width:12px;height:12px;border-right:2px solid var(--b);border-bottom:2px solid var(--b);transform:rotate(45deg);transition:transform .2s;margin-right:6px}
+  details[open] summary::after{transform:rotate(-135deg)}
+  details p{margin-top:10px;max-width:70ch;color:#34413C}
 
-@keyframes spinRing {
-  from { transform: rotate(0deg); }
-  to   { transform: rotate(360deg); }
-}
+  /* contact */
+  .contact{text-align:center}
+  .contact .lead{margin:20px auto 0}
+  .contact-actions{display:flex;justify-content:center;flex-wrap:wrap;gap:14px;margin-top:34px}
+  .contact-lines{margin-top:26px;color:var(--pierre);font-size:15.5px}
+  footer{background:var(--k);color:#A9BDB5;padding:36px 0;font-size:14px}
+  .foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;align-items:center}
+  .foot em{font-family:var(--serif);font-size:19px;color:#F2B8C6}
+  .wa-float{display:none}
 
-/* Verified badge */
-.badge-verified {
-  position: absolute; bottom: -2px; right: -2px;
-  width: 24px; height: 24px;
-  background: var(--success);
-  border-radius: 50%;
-  border: 2px solid var(--navy);
-  display: flex; align-items: center; justify-content: center;
-  z-index: 2;
-  font-size: 11px;
-}
-
-/* Brand */
-.brand {
-  opacity: 0;
-  animation: fadeUp 0.7s 0.3s ease forwards;
-}
-.brand-eyebrow {
-  font-size: 9px; font-weight: 500;
-  letter-spacing: 4px; text-transform: uppercase;
-  color: var(--gold);
-  margin-bottom: 6px;
-  opacity: 0.7;
-}
-.brand-name {
-  font-family: 'Cinzel', serif;
-  font-size: 34px; font-weight: 900;
-  letter-spacing: 7px;
-  color: var(--white);
-  line-height: 1;
-  margin-bottom: 8px;
-  text-shadow: 0 0 60px rgba(200,168,75,0.15);
-}
-.brand-divider {
-  display: flex; align-items: center; gap: 12px;
-  justify-content: center;
-  margin-bottom: 10px;
-}
-.brand-divider-line {
-  height: 1px; flex: 1;
-  background: linear-gradient(90deg, transparent, var(--gold30), transparent);
-  max-width: 60px;
-}
-.brand-tagline {
-  font-family: 'Playfair Display', serif;
-  font-size: 13.5px; font-style: italic;
-  color: var(--gold2);
-  letter-spacing: 0.5px;
-  white-space: nowrap;
-}
-
-/* ════════════════════════════════════════════
-   BIO CARD
-════════════════════════════════════════════ */
-.bio-card {
-  background: linear-gradient(135deg, var(--white08) 0%, var(--white04) 100%);
-  border: 1px solid var(--gold15);
-  border-radius: var(--rad-lg);
-  padding: 18px 22px;
-  margin-bottom: 28px;
-  position: relative;
-  overflow: hidden;
-  backdrop-filter: blur(8px);
-  opacity: 0;
-  animation: fadeUp 0.7s 0.45s ease forwards;
-}
-.bio-card::before {
-  content:'';
-  position: absolute; top:0; left:0; right:0; height:1px;
-  background: linear-gradient(90deg, transparent 0%, var(--gold2) 30%, var(--gold3) 50%, var(--gold2) 70%, transparent 100%);
-}
-.bio-name {
-  font-family: 'Playfair Display', serif;
-  font-size: 20px; font-weight: 700;
-  color: var(--white);
-  margin-bottom: 5px;
-}
-.bio-name span { color: var(--gold2); }
-.bio-title {
-  font-size: 12px; font-weight: 300;
-  color: var(--white50); letter-spacing: 0.3px;
-  line-height: 1.5;
-  margin-bottom: 12px;
-}
-.bio-value {
-  font-family: 'Playfair Display', serif;
-  font-size: 14px; font-style: italic;
-  color: var(--white80);
-  line-height: 1.55;
-  border-left: 2px solid var(--gold30);
-  padding-left: 12px;
-}
-.bio-value strong { color: var(--gold3); font-style: normal; font-weight: 600; }
-
-/* ════════════════════════════════════════════
-   STATS BAR
-════════════════════════════════════════════ */
-.stats-bar {
-  display: grid; grid-template-columns: repeat(3, 1fr);
-  gap: 3px;
-  margin-bottom: 32px;
-  opacity: 0;
-  animation: fadeUp 0.7s 0.55s ease forwards;
-}
-.stat-cell {
-  background: var(--white04);
-  border: 1px solid rgba(200,168,75,0.10);
-  padding: 14px 10px;
-  text-align: center;
-  border-radius: var(--rad);
-  position: relative;
-  overflow: hidden;
-  cursor: default;
-  transition: background 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
-}
-.stat-cell:hover {
-  background: var(--gold08);
-  border-color: var(--gold30);
-  transform: translateY(-2px);
-}
-.stat-cell::after {
-  content:'';
-  position: absolute;
-  bottom:0; left:20%; right:20%; height:1px;
-  background: linear-gradient(90deg, transparent, var(--gold30), transparent);
-}
-.stat-num {
-  font-family: 'Cinzel', serif;
-  font-size: 26px; font-weight: 700;
-  color: var(--gold2);
-  line-height: 1;
-  margin-bottom: 4px;
-  text-shadow: 0 0 20px rgba(200,168,75,0.25);
-}
-.stat-lbl {
-  font-size: 8.5px; font-weight: 400;
-  color: var(--white20);
-  letter-spacing: 1.2px;
-  text-transform: uppercase;
-  line-height: 1.4;
-}
-
-/* ════════════════════════════════════════════
-   SECTION HEADERS
-════════════════════════════════════════════ */
-.sec-hdr {
-  display: flex; align-items: center; gap: 10px;
-  margin-bottom: 12px;
-  font-size: 8px; font-weight: 600;
-  letter-spacing: 3px; text-transform: uppercase;
-  color: rgba(200,168,75,0.55);
-}
-.sec-hdr::after {
-  content:''; flex:1; height:1px;
-  background: linear-gradient(90deg, var(--gold15), transparent);
-}
-.sec-hdr .sec-num {
-  font-family: 'Cinzel', serif;
-  font-size: 9px; color: var(--gold30);
-}
-
-/* ════════════════════════════════════════════
-   LINK GROUPS
-════════════════════════════════════════════ */
-.link-group {
-  display: flex; flex-direction: column;
-  gap: 10px;
-  margin-bottom: 28px;
-}
-
-/* ── BASE CARD ── */
-.lnk {
-  display: flex; align-items: center;
-  gap: 14px;
-  padding: 16px 18px;
-  border-radius: var(--rad-lg);
-  text-decoration: none;
-  position: relative;
-  overflow: hidden;
-  cursor: pointer;
-  -webkit-tap-highlight-color: transparent;
-  transition: transform 0.22s cubic-bezier(0.34,1.56,0.64,1),
-              box-shadow 0.22s ease,
-              background 0.22s ease,
-              border-color 0.22s ease;
-  will-change: transform;
-}
-.lnk:hover  { transform: translateY(-3px) translateX(3px); }
-.lnk:active { transform: scale(0.98); }
-
-/* Shine sweep */
-.lnk::after {
-  content:'';
-  position: absolute; top:0; left:-100%; width:55%; height:100%;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.04), transparent);
-  transition: left 0.5s ease;
-  pointer-events: none;
-}
-.lnk:hover::after { left: 160%; }
-
-/* Left accent bar */
-.lnk::before {
-  content:''; position:absolute;
-  left:0; top:0; bottom:0; width:2px;
-  border-radius: var(--rad) 0 0 var(--rad);
-  transition: width 0.2s ease;
-}
-.lnk:hover::before { width: 3px; }
-
-/* ── LEVEL 1 — PRIMARY HERO ── */
-.lnk-hero {
-  background: linear-gradient(135deg, rgba(200,168,75,0.18) 0%, rgba(200,168,75,0.06) 100%);
-  border: 1px solid rgba(200,168,75,0.40);
-  box-shadow: 0 4px 24px rgba(200,168,75,0.08), inset 0 1px 0 rgba(200,168,75,0.12);
-}
-.lnk-hero::before { background: var(--gold2); }
-.lnk-hero:hover {
-  box-shadow: 0 8px 40px rgba(200,168,75,0.18), -3px 0 0 var(--gold2), inset 0 1px 0 rgba(200,168,75,0.2);
-  border-color: rgba(200,168,75,0.65);
-}
-
-/* Pulse ring on hero */
-.lnk-hero .pulse-ring {
-  position: absolute; right: 16px; top:50%; transform: translateY(-50%);
-  width: 8px; height: 8px;
-}
-.pulse-ring::before, .pulse-ring::after {
-  content:'';
-  position: absolute; inset:0;
-  border-radius: 50%;
-  background: var(--success);
-}
-.pulse-ring::after {
-  animation: pulse-anim 2s ease infinite;
-  background: transparent;
-  border: 1px solid var(--success);
-}
-@keyframes pulse-anim {
-  0%   { transform: scale(1); opacity: 0.8; }
-  100% { transform: scale(3); opacity: 0; }
-}
-
-/* ── LEVEL 2 — VALUE ── */
-.lnk-val {
-  background: var(--white04);
-  border: 1px solid rgba(255,255,255,0.08);
-}
-.lnk-val::before { background: rgba(200,168,75,0.6); }
-.lnk-val:hover {
-  background: var(--white08);
-  border-color: var(--gold15);
-  box-shadow: 0 4px 20px rgba(0,0,0,0.2), -3px 0 0 rgba(200,168,75,0.5);
-}
-
-/* ── LEVEL 3 — PROOF / CONTACT ── */
-.lnk-proof {
-  background: rgba(255,255,255,0.02);
-  border: 1px solid rgba(255,255,255,0.05);
-}
-.lnk-proof::before { background: rgba(200,168,75,0.3); }
-.lnk-proof:hover {
-  background: var(--white04);
-  border-color: rgba(200,168,75,0.10);
-  box-shadow: -2px 0 0 rgba(200,168,75,0.3);
-}
-
-/* ── ICON ── */
-.lnk-ico {
-  width: 42px; height: 42px; flex-shrink: 0;
-  border-radius: 10px;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 18px;
-  border: 1px solid var(--gold15);
-  background: var(--gold08);
-  transition: background 0.2s ease, transform 0.2s ease;
-}
-.lnk:hover .lnk-ico { background: var(--gold15); transform: scale(1.05); }
-.lnk-hero .lnk-ico { border-color: var(--gold30); background: rgba(200,168,75,0.14); }
-
-/* ── BODY ── */
-.lnk-body { flex: 1; min-width: 0; }
-.lnk-label {
-  display: block;
-  font-size: 13.5px; font-weight: 600;
-  color: var(--white);
-  margin-bottom: 3px;
-  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
-  letter-spacing: 0.2px;
-}
-.lnk-hero .lnk-label { color: var(--gold3); font-size: 14px; }
-
-.lnk-sub {
-  display: block;
-  font-size: 11px; font-weight: 300;
-  color: var(--white50);
-  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
-  letter-spacing: 0.1px;
-  line-height: 1.4;
-}
-
-/* Pill badge */
-.lnk-pill {
-  display: inline-block;
-  font-size: 9px; font-weight: 600;
-  letter-spacing: 1px;
-  padding: 2px 7px;
-  border-radius: 20px;
-  margin-left: 6px;
-  vertical-align: middle;
-}
-.pill-free { background: rgba(34,197,94,0.18); color: var(--success); border: 1px solid rgba(34,197,94,0.3); }
-.pill-hot  { background: rgba(239,68,68,0.15); color: #FCA5A5; border: 1px solid rgba(239,68,68,0.25); animation: pillblink 2s ease infinite; }
-.pill-new  { background: var(--gold08); color: var(--gold2); border: 1px solid var(--gold15); }
-
-@keyframes pillblink {
-  0%,100% { opacity: 1; } 50% { opacity: 0.6; }
-}
-
-/* ── ARROW ── */
-.lnk-arr {
-  font-size: 16px; color: var(--gold30);
-  transition: transform 0.2s ease, color 0.2s ease;
-  flex-shrink: 0;
-}
-.lnk:hover .lnk-arr { transform: translateX(5px); color: var(--gold2); }
-
-/* ════════════════════════════════════════════
-   CTA CONTACT ROW
-════════════════════════════════════════════ */
-.cta-row {
-  display: grid; grid-template-columns: 1fr 1fr;
-  gap: 12px;
-  margin-bottom: 28px;
-  opacity: 0;
-  animation: fadeUp 0.7s 1.0s ease forwards;
-}
-.cta-btn {
-  display: flex; align-items: center; justify-content: center;
-  gap: 8px;
-  padding: 15px 12px;
-  border-radius: var(--rad-lg);
-  text-decoration: none;
-  font-size: 12.5px; font-weight: 600;
-  letter-spacing: 0.8px; text-transform: uppercase;
-  transition: transform 0.22s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.22s ease;
-  position: relative; overflow: hidden;
-}
-.cta-btn:hover { transform: translateY(-3px); }
-.cta-btn:active { transform: scale(0.97); }
-
-.cta-wa {
-  background: linear-gradient(135deg, #25D366 0%, #128C54 100%);
-  color: #fff; border: none;
-  box-shadow: 0 4px 20px rgba(37,211,102,0.2);
-}
-.cta-wa:hover { box-shadow: 0 8px 32px rgba(37,211,102,0.35); }
-
-.cta-em {
-  background: transparent;
-  color: var(--gold2);
-  border: 1px solid var(--gold30);
-}
-.cta-em:hover { background: var(--gold08); box-shadow: 0 4px 20px rgba(200,168,75,0.12); border-color: var(--gold); }
-
-/* ════════════════════════════════════════════
-   GUARANTEE BLOCK
-════════════════════════════════════════════ */
-.guarantee {
-  background: linear-gradient(135deg, rgba(200,168,75,0.10) 0%, rgba(10,30,58,0.6) 100%);
-  border: 1px solid var(--gold30);
-  border-radius: var(--rad-lg);
-  padding: 22px 24px;
-  margin-bottom: 28px;
-  position: relative;
-  overflow: hidden;
-  opacity: 0;
-  animation: fadeUp 0.7s 1.05s ease forwards;
-}
-.guarantee::before {
-  content:'';
-  position: absolute; top:0; left:0; right:0; height:2px;
-  background: linear-gradient(90deg, var(--gold) 0%, var(--gold2) 40%, rgba(200,168,75,0.2) 100%);
-}
-.guarantee::after {
-  content:'';
-  position: absolute; bottom: -40px; right: -40px;
-  width: 120px; height: 120px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(200,168,75,0.06) 0%, transparent 70%);
-  pointer-events: none;
-}
-.guarantee-title {
-  font-family: 'Cinzel', serif;
-  font-size: 10px; font-weight: 600;
-  color: var(--gold2);
-  letter-spacing: 2.5px; text-transform: uppercase;
-  margin-bottom: 14px;
-  display: flex; align-items: center; gap: 8px;
-}
-.guarantee-title span { font-size: 14px; }
-.g-items { display: flex; flex-direction: column; gap: 9px; }
-.g-item {
-  display: flex; align-items: flex-start; gap: 10px;
-  font-size: 12px; font-weight: 300;
-  color: var(--white80); line-height: 1.45;
-}
-.g-dot {
-  width: 6px; height: 6px; flex-shrink: 0;
-  background: var(--gold2); opacity: 0.75;
-  transform: rotate(45deg);
-  margin-top: 5px;
-}
-.g-item.highlight {
-  font-weight: 500; color: var(--white);
-}
-.g-item.highlight .g-dot { opacity: 1; background: var(--gold3); }
-
-/* ════════════════════════════════════════════
-   QUOTE BLOCK
-════════════════════════════════════════════ */
-.quote-block {
-  text-align: center;
-  padding: 26px 20px;
-  margin-bottom: 28px;
-  border: 1px solid rgba(200,168,75,0.10);
-  border-radius: var(--rad-lg);
-  position: relative;
-  background: rgba(255,255,255,0.015);
-  opacity: 0;
-  animation: fadeUp 0.7s 1.1s ease forwards;
-}
-.quote-mark {
-  font-family: 'Playfair Display', serif;
-  font-size: 64px; line-height: 0.5;
-  color: rgba(200,168,75,0.12);
-  font-style: italic;
-  display: block;
-  margin-bottom: 14px;
-}
-.quote-text {
-  font-family: 'Playfair Display', serif;
-  font-size: 16px; font-style: italic;
-  color: rgba(255,255,255,0.70);
-  line-height: 1.65;
-  margin-bottom: 12px;
-}
-.quote-text em { color: var(--gold3); font-style: normal; font-weight: 600; }
-.quote-author {
-  font-size: 10px; font-weight: 500;
-  letter-spacing: 3px; text-transform: uppercase;
-  color: rgba(200,168,75,0.45);
-}
-
-/* ════════════════════════════════════════════
-   FOOTER
-════════════════════════════════════════════ */
-.page-footer {
-  text-align: center;
-  padding-bottom: 8px;
-  opacity: 0;
-  animation: fadeUp 0.6s 1.15s ease forwards;
-}
-.footer-brand {
-  font-family: 'Cinzel', serif;
-  font-size: 10px; letter-spacing: 4px;
-  color: rgba(200,168,75,0.25);
-  margin-bottom: 4px;
-  text-transform: uppercase;
-}
-.footer-tagline {
-  font-family: 'Playfair Display', serif;
-  font-size: 12px; font-style: italic;
-  color: rgba(255,255,255,0.12);
-}
-
-/* ════════════════════════════════════════════
-   FLOATING STICKY CTA
-════════════════════════════════════════════ */
-.sticky-cta {
-  position: fixed; bottom: 22px; right: 22px; z-index: 100;
-  opacity: 0;
-  transform: translateY(20px) scale(0.9);
-  transition: opacity 0.35s ease, transform 0.35s cubic-bezier(0.34,1.56,0.64,1);
-  pointer-events: none;
-}
-.sticky-cta.visible {
-  opacity: 1;
-  transform: translateY(0) scale(1);
-  pointer-events: auto;
-}
-.sticky-cta a {
-  display: flex; align-items: center; gap: 10px;
-  background: linear-gradient(135deg, #25D366, #128C54);
-  color: #fff;
-  padding: 14px 20px;
-  border-radius: 50px;
-  text-decoration: none;
-  font-size: 12.5px; font-weight: 600;
-  box-shadow: 0 8px 30px rgba(37,211,102,0.35), 0 2px 8px rgba(0,0,0,0.3);
-  letter-spacing: 0.3px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-.sticky-cta a:hover {
-  transform: scale(1.05);
-  box-shadow: 0 12px 40px rgba(37,211,102,0.45);
-}
-.sticky-cta a .ico { font-size: 18px; }
-
-/* ════════════════════════════════════════════
-   STAGGERED ANIMATIONS
-════════════════════════════════════════════ */
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(24px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-@keyframes fadeDown {
-  from { opacity: 0; transform: translateY(-18px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-
-.lg-1 { opacity:0; animation: fadeUp 0.6s 0.60s ease forwards; }
-.lg-2 { opacity:0; animation: fadeUp 0.6s 0.68s ease forwards; }
-.lg-3 { opacity:0; animation: fadeUp 0.6s 0.76s ease forwards; }
-.lg-4 { opacity:0; animation: fadeUp 0.6s 0.84s ease forwards; }
-.lg-5 { opacity:0; animation: fadeUp 0.6s 0.90s ease forwards; }
-
-/* Section group entries */
-.sg { opacity:0; animation: fadeUp 0.6s ease forwards; }
-.sg-1 { animation-delay: 0.63s; }
-.sg-2 { animation-delay: 0.82s; }
-.sg-3 { animation-delay: 0.95s; }
-
-/* ════════════════════════════════════════════
-   RESPONSIVE
-════════════════════════════════════════════ */
-@media (max-width: 380px) {
-  .brand-name { font-size: 28px; letter-spacing: 5px; }
-  .wrap { padding: 50px 16px 110px; }
-  .sticky-cta a span:not(.ico) { display: none; }
-  .sticky-cta a { border-radius: 50%; width: 52px; height: 52px; padding: 0; justify-content: center; }
-}
-
-/* ════════════════════════════════════════════
-   COUNTER ANIMATION
-════════════════════════════════════════════ */
-.count-animated { transition: color 0.3s ease; }
+  @media (max-width:960px){
+    .hero-grid,.session-grid,.trust,.faq-grid,.scale{grid-template-columns:1fr}
+    .trace{justify-self:start;transform:none}
+    .deliv{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .cycle{grid-template-columns:repeat(2,minmax(0,1fr));gap:32px 0}
+    .cycle::before{display:none}
+    .plans,.extras{grid-template-columns:1fr}
+    .nav ul{display:none}
+    section{padding:76px 0}
+  }
+  @media (max-width:600px){
+    .deliv,.cycle,.moments{grid-template-columns:1fr}
+    .levels{grid-template-columns:1fr 1fr}
+    .brand-word{font-size:20px}
+    .nav .btn{display:none}
+    .hero-grid{padding:64px 0 72px}
+    .wa-float{display:flex;position:fixed;right:16px;bottom:16px;z-index:40;box-shadow:0 10px 24px -8px rgba(0,0,0,.4)}
+  }
 </style>
 </head>
 <body>
 
-<!-- Backgrounds -->
-<div class="bg-mesh"></div>
-<div class="bg-grid"></div>
-<div class="bg-noise"></div>
-<div class="corner c-tl"></div>
-<div class="corner c-tr"></div>
-<div class="corner c-bl"></div>
-<div class="corner c-br"></div>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top" aria-label="INGENIUM, accueil">
+      <svg width="22" height="46" viewBox="64 20 72 152" aria-hidden="true"><path d="M70,64 H130 V73 Q113,73 113,84 V152 Q113,163 136,163 V172 H64 V163 Q87,163 87,152 V84 Q87,73 70,73 Z" fill="#0F3D32"/><path d="M100,20 L113,37 L100,54 L87,37 Z" fill="#A3213F"/></svg>
+      <span class="brand-word">INGENIUM</span>
+    </a>
+    <nav aria-label="Navigation principale">
+      <ul>
+        <li><a href="#suivi">Le suivi</a></li>
+        <li><a href="#methode">La méthode</a></li>
+        <li><a href="#formules">Formules</a></li>
+        <li><a href="#questions">Questions</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn-b" href="https://wa.me/221765311442?text=Bonjour%2C%20je%20souhaite%20r%C3%A9server%20un%20bilan%20d%27entr%C3%A9e%20INGENIUM.">Réserver un bilan</a>
+  </div>
+</header>
 
-<!-- Floating Sticky CTA -->
-<div class="sticky-cta" id="stickyCta">
-  <a href="https://wa.me/221765311442?text=Bonjour%2C%20je%20souhaite%20r%C3%A9server%20un%20diagnostic%20gratuit%20pour%20mon%20enfant." target="_blank">
-    <span class="ico">📱</span>
-    <span>Diagnostic Gratuit →</span>
-  </a>
+<main id="top">
+
+<section class="hero" aria-labelledby="hero-title">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="kicker">Accompagnement académique · Dakar</p>
+      <h1 id="hero-title">Le talent,<br><em>par la méthode.</em></h1>
+      <p class="lead">Du CM2 à la Terminale, à domicile ou en ligne. Trois objectifs écrits dès le bilan d'entrée, et des nouvelles après chaque séance : vous savez toujours ce que votre enfant a travaillé, ce qu'il maîtrise et ce qu'il reste à faire.</p>
+      <div class="hero-actions">
+        <a class="btn btn-b" href="https://wa.me/221765311442?text=Bonjour%2C%20je%20souhaite%20r%C3%A9server%20un%20bilan%20d%27entr%C3%A9e%20INGENIUM.">Réserver un bilan d'entrée</a>
+        <a class="btn btn-light" href="#suivi">Voir comment ça se passe</a>
+      </div>
+      <p class="hero-note">Bilan d'entrée : 5 000 FCFA · Programmes sénégalais, français et internationaux</p>
+    </div>
+    <div class="trace" role="img" aria-label="Exemple de message reçu par un parent après une séance">
+      <div class="trace-top">
+        <div class="avatar"><svg width="14" height="30" viewBox="64 20 72 152" aria-hidden="true"><path d="M70,64 H130 V73 Q113,73 113,84 V152 Q113,163 136,163 V172 H64 V163 Q87,163 87,152 V84 Q87,73 70,73 Z" fill="#F3F5F2"/><path d="M100,20 L113,37 L100,54 L87,37 Z" fill="#E2506F"/></svg></div>
+        <div><b>INGENIUM</b><span>Trace de séance · mardi 18 h 42</span></div>
+      </div>
+      <div class="bubble">
+        <div><strong>Aïcha · 6e · séance du mardi</strong></div>
+        <div class="row" style="margin-top:8px"><span class="lbl">Travaillé</span><span>Addition de fractions</span></div>
+        <div class="row"><span class="lbl">Acquis</span><span>Mettre au même dénominateur</span></div>
+        <div class="row"><span class="lbl">À revoir</span><span>Simplifier le résultat</span></div>
+        <div class="row"><span class="lbl">Pour jeudi</span><span>Exercices 4 et 6, p. 52</span></div>
+      </div>
+      <div class="photo"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5E6B66" stroke-width="1.8" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="12" cy="12" r="3.5"/></svg> Photo de la fiche écrite par l'élève</div>
+      <span class="tag-ex">Exemple fictif</span>
+    </div>
+  </div>
+</section>
+
+<div class="strip">
+  <div class="wrap">
+    <ul>
+      <li>Trois objectifs écrits</li>
+      <li>Une trace après chaque séance</li>
+      <li>Un bilan chaque mois</li>
+      <li>Un seul interlocuteur</li>
+    </ul>
+  </div>
 </div>
 
-<!-- Main Content -->
-<main class="wrap">
-
-  <!-- ── HERO ── -->
-  <header class="hero">
-
-    <!-- Avatar Ring -->
-    <div class="avatar-ring">
-      <div class="avatar-inner">IF</div>
-      <div class="badge-verified">✓</div>
-    </div>
-
-    <!-- Brand -->
-    <div class="brand">
-      <p class="brand-eyebrow">Centre de Remédiation · Dakar &amp; Thiès</p>
-      <h1 class="brand-name">INGENIUM</h1>
-      <div class="brand-divider">
-        <div class="brand-divider-line"></div>
-        <span class="brand-tagline">L'Excellence, Structurée.</span>
-        <div class="brand-divider-line"></div>
+<section id="suivi" aria-labelledby="suivi-title">
+  <div class="wrap">
+    <div class="deliv-head">
+      <div>
+        <p class="kicker">Le suivi</p>
+        <h2 id="suivi-title">Ce que vous recevez,<br>et quand.</h2>
       </div>
+      <p class="lead" style="max-width:44ch">Quatre documents, toujours les mêmes, pour que le travail se voie sans avoir à le demander.</p>
     </div>
-  </header>
-
-  <!-- ── BIO CARD ── -->
-  <div class="bio-card">
-    <div class="bio-name">Ibrahima <span>FALL</span></div>
-    <div class="bio-title">Directeur Pédagogique &amp; Fondateur · INGENIUM · Yenne Kids' Academy · Chercheur M2 GSÉ</div>
-    <div class="bio-value">
-      Je transforme <strong>chaque élève en difficultés</strong> en un apprenant confiant —
-      grâce à une méthode structurée, un suivi contractuel et <strong>+2 points garantis</strong> en 12 semaines.
+    <div class="deliv">
+      <article class="dcard"><span class="dnum">01</span><h3>Le compte rendu du bilan d'entrée</h3><p>Les résultats partie par partie : ce qui est acquis, à consolider ou prioritaire, et trois objectifs proposés.</p><span class="when">Après le test de 1 h 30</span></article>
+      <article class="dcard"><span class="dnum">02</span><h3>Les trois objectifs</h3><p>Trois objectifs précis, fixés dans le compte rendu du bilan d'entrée, chacun avec un niveau de départ et un niveau visé.</p><span class="when">Une fois par période</span></article>
+      <article class="dcard"><span class="dnum">03</span><h3>La trace de séance</h3><p>Écrite par votre enfant en fin de séance : ce qu'il a travaillé, ce qu'il sait faire, ce qu'il doit revoir.</p><span class="when">Le jour même</span></article>
+      <article class="dcard"><span class="dnum">04</span><h3>Le bilan du mois</h3><p>Séances, assiduité, travail personnel, progrès sur chaque objectif et priorité du mois suivant, sur une page.</p><span class="when">Avant le 5 du mois</span></article>
     </div>
   </div>
+</section>
 
-  <!-- ── STATS ── -->
-  <div class="stats-bar">
-    <div class="stat-cell">
-      <div class="stat-num"><span class="count-animated" data-target="17">0</span><small style="font-size:14px">ans</small></div>
-      <div class="stat-lbl">Expérience<br>Terrain</div>
+<section id="methode" class="method" aria-labelledby="methode-title">
+  <div class="wrap">
+    <p class="kicker">La méthode</p>
+    <h2 id="methode-title">Une période, quatre temps.</h2>
+    <p class="lead" style="margin-top:20px">Chaque cycle suit le calendrier de l'établissement de l'élève (trimestre, semestre ou session), pour que le travail se lise dans les bulletins. Le bilan de fin de période ouvre le cycle suivant.</p>
+    <div class="cycle">
+      <div class="step"><div class="dot">1</div><h3>Diagnostiquer</h3><p>Un test par niveau repère, partie par partie, ce qui est acquis et ce qui est prioritaire.</p></div>
+      <div class="step"><div class="dot">2</div><h3>Planifier</h3><p>Trois objectifs au plus, formulés « l'élève sera capable de… », fixés au bilan d'entrée pour toute la période.</p></div>
+      <div class="step"><div class="dot">3</div><h3>Accompagner</h3><p>Des séances régulières, toutes construites sur le même déroulé.</p></div>
+      <div class="step"><div class="dot">4</div><h3>Rendre compte</h3><p>Traces, bilans mensuels, bilan de fin de période.</p></div>
     </div>
-    <div class="stat-cell">
-      <div class="stat-num">+<span class="count-animated" data-target="2">0</span><small style="font-size:14px">pts</small></div>
-      <div class="stat-lbl">Garantis<br>Contrat</div>
-    </div>
-    <div class="stat-cell">
-      <div class="stat-num"><span class="count-animated" data-target="3">0</span></div>
-      <div class="stat-lbl">Packs<br>Disponibles</div>
-    </div>
-  </div>
-
-  <!-- ══════════════════════════════════════
-       NIVEAU 1 — LIEN PRINCIPAL
-  ══════════════════════════════════════ -->
-  <div class="sec-hdr sg sg-1"><span class="sec-num">01</span>Action Prioritaire</div>
-  <nav class="link-group sg sg-1">
-
-    <a class="lnk lnk-hero lg-1" href="mailto:ingeniumsn@gmail.com?subject=Demande%20diagnostic%20gratuit%20INGENIUM&body=Bonjour%2C%20je%20souhaite%20r%C3%A9server%20un%20diagnostic%20gratuit%20pour%20mon%20enfant.">
-      <div class="lnk-ico">🎯</div>
-      <div class="lnk-body">
-        <span class="lnk-label">Tester votre enfant GRATUITEMENT <span class="lnk-pill pill-free">GRATUIT</span></span>
-        <span class="lnk-sub">Bilan académique 2h · Rapport PDF sous 48h · Sans engagement</span>
+    <div class="scale">
+      <div>
+        <h3 style="font-size:28px">Une échelle simple, sans note promise.</h3>
+        <p style="margin-top:10px;color:#34413C">Chaque objectif est suivi sur quatre niveaux, lisibles par l'élève comme par la famille.</p>
       </div>
-      <div class="pulse-ring"></div>
-    </a>
-
-  </nav>
-
-  <!-- ══════════════════════════════════════
-       NIVEAU 2 — VALEUR
-  ══════════════════════════════════════ -->
-  <div class="sec-hdr sg sg-2"><span class="sec-num">02</span>Nos Programmes</div>
-  <nav class="link-group sg sg-2">
-
-    <a class="lnk lnk-val lg-2" href="mailto:ingeniumsn@gmail.com?subject=Informations%20packs%20INGENIUM">
-      <div class="lnk-ico">📈</div>
-      <div class="lnk-body">
-        <span class="lnk-label">Voir les 3 Packs — +2 pts garantis <span class="lnk-pill pill-hot">POPULAIRE</span></span>
-        <span class="lnk-sub">Essentiel · Excellence · Élite · En ligne &amp; À domicile</span>
-      </div>
-      <span class="lnk-arr">›</span>
-    </a>
-
-    <a class="lnk lnk-val lg-3" href="mailto:ingeniumsn@gmail.com?subject=Informations%20tarifs%20INGENIUM">
-      <div class="lnk-ico">💎</div>
-      <div class="lnk-body">
-        <span class="lnk-label">Tarifs &amp; Contrat de Garantie</span>
-        <span class="lnk-sub">10 000 F/séance en ligne · 15 000 F à domicile · Contrat signé</span>
-      </div>
-      <span class="lnk-arr">›</span>
-    </a>
-
-    <a class="lnk lnk-val lg-4" href="mailto:ingeniumsn@gmail.com?subject=Candidature%20tuteur%20CAP%20INGENIUM">
-      <div class="lnk-ico">🎓</div>
-      <div class="lnk-body">
-        <span class="lnk-label">Devenir Tuteur Certifié INGENIUM <span class="lnk-pill pill-new">NOUVEAU</span></span>
-        <span class="lnk-sub">Programme CAP · 20 modules · Formation pédagogique complète</span>
-      </div>
-      <span class="lnk-arr">›</span>
-    </a>
-
-  </nav>
-
-  <!-- ══════════════════════════════════════
-       NIVEAU 3 — PREUVE SOCIALE
-  ══════════════════════════════════════ -->
-  <div class="sec-hdr sg sg-3"><span class="sec-num">03</span>Mon Univers Professionnel</div>
-  <nav class="link-group sg sg-3">
-
-    <a class="lnk lnk-proof lg-5" href="https://www.linkedin.com/in/ibrahima-fall-31b689238" target="_blank">
-      <div class="lnk-ico">💼</div>
-      <div class="lnk-body">
-        <span class="lnk-label">LinkedIn · Ibrahima FALL</span>
-        <span class="lnk-sub">Leadership scolaire · IA &amp; Éducation · Articles &amp; publications</span>
-      </div>
-      <span class="lnk-arr">›</span>
-    </a>
-
-  </nav>
-
-  <!-- ══════════════════════════════════════
-       NIVEAU 4 — CONTACT DIRECT
-  ══════════════════════════════════════ -->
-  <div class="cta-row">
-    <a class="cta-btn cta-wa" href="https://wa.me/221765311442?text=Bonjour%2C%20je%20souhaite%20prendre%20rendez-vous%20avec%20INGENIUM." target="_blank">
-      <span>📱</span> WhatsApp
-    </a>
-    <a class="cta-btn cta-em" href="mailto:ingeniumsn@gmail.com">
-      <span>✉️</span> Email
-    </a>
-  </div>
-
-  <!-- ── GUARANTEE ── -->
-  <div class="guarantee">
-    <div class="guarantee-title"><span>🔒</span>La Garantie INGENIUM</div>
-    <div class="g-items">
-      <div class="g-item">
-        <div class="g-dot"></div>
-        <span>Diagnostic académique complet de 2h avant tout engagement</span>
-      </div>
-      <div class="g-item">
-        <div class="g-dot"></div>
-        <span>Plan de Remédiation Individualisé sur 12 semaines</span>
-      </div>
-      <div class="g-item">
-        <div class="g-dot"></div>
-        <span>Rapport de séance envoyé au parent dans les 2h</span>
-      </div>
-      <div class="g-item highlight">
-        <div class="g-dot"></div>
-        <span><strong>+2 points garantis contractuellement</strong> en 12 semaines — ou remboursement</span>
+      <div class="levels">
+        <div class="lvl l1"><b>1</b>Découverte</div>
+        <div class="lvl l2"><b>2</b>Réussit avec aide</div>
+        <div class="lvl l3"><b>3</b>Réussit seul</div>
+        <div class="lvl l4"><b>4</b>Réussit seul et explique</div>
       </div>
     </div>
   </div>
+</section>
 
-  <!-- ── QUOTE ── -->
-  <div class="quote-block">
-    <span class="quote-mark">&ldquo;</span>
-    <p class="quote-text">
-      Du potentiel à la performance —<br>
-      pour <em>chaque élève</em>, sans exception.
-    </p>
-    <p class="quote-author">— Ibrahima FALL, Fondateur INGENIUM</p>
+<section aria-labelledby="seance-title">
+  <div class="wrap session-grid">
+    <div>
+      <p class="kicker">La séance</p>
+      <h2 id="seance-title">1 h 30,<br>quatre moments.</h2>
+      <div class="callout">En fin de séance, <strong>votre enfant écrit lui-même</strong> ce qu'il a appris, ce qu'il sait faire et ce qu'il doit revoir. Formuler ce que l'on a compris fait partie de l'apprentissage.</div>
+    </div>
+    <div>
+      <div class="bar" role="img" aria-label="Répartition de la séance : 10, 25, 40 et 15 minutes">
+        <div class="s1">10′</div><div class="s2">25′</div><div class="s3">40′</div><div class="s4">15′</div>
+      </div>
+      <div class="moments">
+        <div><h3>Réactiver <span>10 min</span></h3><p>Correction du travail donné, trois questions flash.</p></div>
+        <div><h3>Construire <span>25 min</span></h3><p>La notion du jour, sur un exemple guidé.</p></div>
+        <div><h3>S'exercer <span>40 min</span></h3><p>Des exercices gradués, du guidé vers l'autonome.</p></div>
+        <div class="anchor"><h3>Ancrer <span>15 min</span></h3><p>Synthèse, travail à faire, trace envoyée avant la fin.</p></div>
+      </div>
+    </div>
   </div>
+</section>
 
-  <!-- ── FOOTER ── -->
-  <footer class="page-footer">
-    <p class="footer-brand">INGENIUM · Dakar &amp; Thiès</p>
-    <p class="footer-tagline">Le génie est déjà là.</p>
-  </footer>
+<section id="formules" class="pricing" aria-labelledby="formules-title">
+  <div class="wrap">
+    <div class="pricing-head">
+      <div>
+        <p class="kicker">Formules et tarifs</p>
+        <h2 id="formules-title">Choisir son rythme.</h2>
+      </div>
+      <div class="toggle" role="group" aria-label="Format des séances">
+        <button type="button" aria-pressed="true" data-fmt="dom">À domicile</button>
+        <button type="button" aria-pressed="false" data-fmt="web">En ligne</button>
+      </div>
+    </div>
+    <div class="plans">
+      <article class="plan">
+        <h3>Essentiel</h3>
+        <p class="rhythm">1 séance par semaine · 4 par mois</p>
+        <p class="price"><span data-dom="60 000" data-web="40 000">60 000</span> <small>FCFA / mois</small></p>
+        <p class="per">soit <span data-dom="15 000" data-web="10 000">15 000</span> FCFA la séance</p>
+        <p class="use">Un suivi hebdomadaire pour garder le cap.</p>
+      </article>
+      <article class="plan pop">
+        <span class="badge">Recommandé pour consolider</span>
+        <h3>Régulier</h3>
+        <p class="rhythm">2 séances par semaine · 8 par mois</p>
+        <p class="price"><span data-dom="110 000" data-web="75 000">110 000</span> <small>FCFA / mois</small></p>
+        <p class="per">soit <span data-dom="13 750" data-web="9 375">13 750</span> FCFA la séance</p>
+        <p class="use">Pour reprendre les bases et suivre le programme.</p>
+      </article>
+      <article class="plan">
+        <h3>Renforcé</h3>
+        <p class="rhythm">3 séances par semaine · 12 par mois</p>
+        <p class="price"><span data-dom="160 000" data-web="110 000">160 000</span> <small>FCFA / mois</small></p>
+        <p class="per">soit <span data-dom="13 333" data-web="9 167">13 333</span> FCFA la séance</p>
+        <p class="use">Pour des lacunes importantes ou une année d'examen.</p>
+      </article>
+    </div>
+    <div class="extras">
+      <div class="extra"><div><h3>Bilan d'entrée</h3><p>Test de 1 h 30 et restitution de 20 minutes, par enfant.</p></div><p class="price">5 000 <small>FCFA</small></p></div>
+      <div class="extra"><div><h3>Stage examen</h3><p>Séances rapprochées avant le BFEM ou le bac.</p></div><p class="price"><span data-dom="15 000" data-web="10 000">15 000</span> <small>FCFA / séance</small></p></div>
+    </div>
+    <p class="fine">Séances de 1 h 30. Toutes les formules comprennent les trois objectifs, la trace après chaque séance et le bilan mensuel. À domicile, le déplacement est compris dans la zone habituelle ; au-delà, le tarif est ajusté. Deux enfants de la même classe à la même séance : formule Duo, tarif +40 %. Une séance offerte en période d'évaluation, quatre au plus dans l'année. Paiement d'avance avant le 5 du mois, par Wave (+221 76 531 14 42), Orange Money (+221 71 100 00 11) ou espèces. Un mois de vacances scolaires est facturé au nombre de séances prévues.</p>
+  </div>
+</section>
+
+<section aria-labelledby="engagement-title">
+  <div class="wrap trust">
+    <div class="promise-box">
+      <p class="kicker">Notre engagement</p>
+      <h2 id="engagement-title" style="font-size:38px">Ce que nous promettons.</h2>
+      <ul>
+        <li>Un bilan d'entrée écrit avant la première séance.</li>
+        <li>Trois objectifs écrits, fixés dès le bilan d'entrée.</li>
+        <li>Une trace envoyée le jour même, après chaque séance.</li>
+        <li>Un bilan du mois avant le 5.</li>
+        <li>Des objectifs réajustés si l'un d'eux ne progresse pas en quatre semaines.</li>
+      </ul>
+      <p class="no"><strong>Et ce que nous ne promettons pas :</strong> une note. La progression dépend aussi de l'assiduité et du travail personnel de l'élève. Elle se mesure et se montre, elle ne se garantit pas.</p>
+    </div>
+    <div class="founder">
+      <p class="kicker">Le fondateur</p>
+      <h3>M. Ibrahima FALL</h3>
+      <p class="role">Professeur de mathématiques · Directeur pédagogique</p>
+      <p>Dix-huit ans dans l'éducation, dont douze ans d'enseignement des mathématiques en lycée public au Sénégal, puis la direction pédagogique d'établissements, notamment d'une école internationale bilingue. Formateur en leadership éducatif.</p>
+      <p>Il accompagne lui-même les élèves en mathématiques. Pour les autres disciplines, INGENIUM fait appel à des collègues qui appliquent la même méthode ; vous gardez un seul interlocuteur.</p>
+      <p class="supports">Les tests de bilan, les fiches de suivi et les supports de cours sont conçus par INGENIUM, dont un manuel de mathématiques de Seconde S en préparation.</p>
+    </div>
+  </div>
+</section>
+
+<section id="questions" class="faq" aria-labelledby="faq-title">
+  <div class="wrap faq-grid">
+    <div>
+      <p class="kicker">Questions fréquentes</p>
+      <h2 id="faq-title">Avant de commencer.</h2>
+    </div>
+    <div>
+      <details><summary>Quels niveaux et quels programmes ?</summary><p>Du CM2 à la Terminale : programme sénégalais (BFEM, bac, dont la série STEG), programme français et programmes internationaux.</p></details>
+      <details><summary>Comment se passe le bilan d'entrée ?</summary><p>Votre enfant passe un test de 1 h 30 dans la discipline choisie. Nous vous présentons ensuite les résultats en 20 minutes, partie par partie, avec trois objectifs proposés pour la période en cours. Le bilan coûte 5 000 FCFA par enfant, réglés avant le test. Il n'engage à rien : vous restez libre de suivre ou non le plan proposé.</p></details>
+      <details><summary>Les séances en ligne sont-elles aussi efficaces ?</summary><p>Le déroulé, la trace et le bilan sont les mêmes. L'en ligne convient bien aux élèves autonomes et aux familles éloignées ; pour les plus jeunes, nous recommandons plutôt le domicile.</p></details>
+      <details><summary>Que se passe-t-il en cas d'absence ?</summary><p>Une séance annulée au moins 24 heures à l'avance est reportée dans les 30 jours, en ligne si aucun créneau commun n'est possible à domicile. Annulée moins de 24 heures avant, elle reste due. Une séance annulée par INGENIUM est rattrapée dans les 30 jours, sinon déduite du paiement suivant.</p></details>
+      <details><summary>Et pendant les vacances scolaires ?</summary><p>Le mois est facturé au nombre de séances réellement prévues.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="contact" aria-labelledby="contact-title">
+  <div class="wrap">
+    <p class="kicker">Contact</p>
+    <h2 id="contact-title">Commençons par un bilan.</h2>
+    <p class="lead">Écrivez-nous sur WhatsApp avec la classe de votre enfant et la discipline concernée : nous vous proposons un créneau dans la semaine.</p>
+    <div class="contact-actions">
+      <a class="btn btn-b" href="https://wa.me/221765311442?text=Bonjour%2C%20je%20souhaite%20r%C3%A9server%20un%20bilan%20d%27entr%C3%A9e%20INGENIUM.">Écrire sur WhatsApp</a>
+      <a class="btn btn-line" href="mailto:ingeniumsn@gmail.com">Envoyer un e-mail</a>
+    </div>
+    <p class="contact-lines">+221 76 531 14 42 · ingeniumsn@gmail.com · Dakar, Sénégal</p>
+  </div>
+</section>
 
 </main>
 
+<footer>
+  <div class="wrap foot">
+    <span>© INGENIUM · Accompagnement académique · Dakar</span>
+    <em>Le talent, par la méthode.</em>
+  </div>
+</footer>
+
+<a class="btn btn-b wa-float" href="https://wa.me/221765311442?text=Bonjour%2C%20je%20souhaite%20r%C3%A9server%20un%20bilan%20d%27entr%C3%A9e%20INGENIUM." aria-label="Écrire à INGENIUM sur WhatsApp">WhatsApp</a>
+
 <script>
-/* ══ COUNTER ANIMATION ══ */
-function animateCounters() {
-  document.querySelectorAll('.count-animated').forEach(el => {
-    const target = parseInt(el.dataset.target);
-    const duration = 1200;
-    const start = performance.now();
-    const update = (now) => {
-      const elapsed = now - start;
-      const progress = Math.min(elapsed / duration, 1);
-      // Ease out
-      const eased = 1 - Math.pow(1 - progress, 3);
-      el.textContent = Math.round(eased * target);
-      if (progress < 1) requestAnimationFrame(update);
-    };
-    requestAnimationFrame(update);
-  });
-}
-
-/* ══ INTERSECTION OBSERVER for counters ══ */
-const statBar = document.querySelector('.stats-bar');
-const obs = new IntersectionObserver((entries) => {
-  if (entries[0].isIntersecting) {
-    animateCounters();
-    obs.disconnect();
-  }
-}, { threshold: 0.5 });
-if (statBar) obs.observe(statBar);
-
-/* ══ STICKY CTA ══ */
-const stickyCta = document.getElementById('stickyCta');
-let lastScrollY = 0;
-window.addEventListener('scroll', () => {
-  const scrollY = window.scrollY;
-  if (scrollY > 200) {
-    stickyCta.classList.add('visible');
-  } else {
-    stickyCta.classList.remove('visible');
-  }
-  lastScrollY = scrollY;
-}, { passive: true });
-
-/* ══ MAGNETIC HOVER on links ══ */
-document.querySelectorAll('.lnk').forEach(el => {
-  el.addEventListener('mousemove', (e) => {
-    const rect = el.getBoundingClientRect();
-    const x = (e.clientX - rect.left - rect.width / 2) * 0.06;
-    const y = (e.clientY - rect.top - rect.height / 2) * 0.06;
-    el.style.transform = `translateY(-3px) translateX(${3 + x}px)`;
-  });
-  el.addEventListener('mouseleave', () => {
-    el.style.transform = '';
-  });
-});
+  (function(){
+    var buttons = document.querySelectorAll('.toggle button');
+    function setFormat(fmt){
+      buttons.forEach(function(b){ b.setAttribute('aria-pressed', b.dataset.fmt === fmt ? 'true' : 'false'); });
+      document.querySelectorAll('[data-dom]').forEach(function(el){ el.textContent = el.dataset[fmt]; });
+    }
+    buttons.forEach(function(b){ b.addEventListener('click', function(){ setFormat(b.dataset.fmt); }); });
+  })();
 </script>
 </body>
 </html>
